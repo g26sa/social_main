@@ -68,6 +68,59 @@ chmod -R 755 video/uploads/
 http://localhost/соцсеть
 ```
 
+## Развёртывание на хостинге 🌐
+
+> ⚠️ **Важно**: GitHub Pages **НЕ подходит** для этого проекта, так как это статический хостинг без поддержки PHP.
+
+### Рекомендуемые платформы для развёртывания:
+
+#### 1. **Render.com** (рекомендуется)
+```bash
+# Комфортно для начинающих, есть free tier
+# Просто свяжите GitHub репозиторий в панели управления
+```
+- Автоматическое развёртывание из GitHub
+- Встроенная поддержка базы данных
+- Free tier с лимитами
+- [Инструкция по развёртыванию на Render](https://docs.render.com/deploy-php)
+
+#### 2. **Railway.app**
+```bash
+# railway login
+# railway link
+# railway deploy
+```
+- Просто развёртывание из GitHub
+- Хорошее соотношение цена/качество
+- Встроенные БД
+
+#### 3. **Heroku**
+```bash
+# heroku login
+# heroku create social-network
+# git push heroku main
+```
+- Классический выбор
+- Надёжный хостинг
+- Платный (free tier закрыт)
+
+#### 4. **Собственный VPS** (DigitalOcean, Linode, Vultr)
+```bash
+# SSH на сервер
+# apt install apache2 php php-mysql mysql-server
+# git clone https://github.com/yourusername/social-network.git
+# Настроить конфигурацию и БД
+```
+- Полный контроль
+- Своя база данных
+- Требует знаний администрирования
+
+### Требования для хостинга:
+- PHP 7.4+ (PHP 8.0+ рекомендуется)
+- MySQL 5.7+ или PostgreSQL
+- Минимум 256MB RAM
+- Поддержка `.env` файлов
+
 ## Структура проекта 📁
 
 ```
