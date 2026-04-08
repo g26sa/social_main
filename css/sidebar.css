@@ -1,0 +1,231 @@
+/* Боковое меню для игр и других страниц */
+
+/* Общие стили */
+body.with-sidebar {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Сервер-сайд меню, скрывается для всех экранов по умолчанию */
+.hidden-menu {
+    display: none;
+}
+
+/* Боковая панель */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 100vh;
+    background: linear-gradient(135deg, #353746 0%, #2a2d38 100%);
+    padding: 20px 0;
+    box-shadow: 2px 0 15px rgba(0, 0, 0, 0.4);
+    overflow-y: auto;
+    z-index: 100;
+}
+
+/* Логотип/заголовок боковой панели */
+.sidebar-header {
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #FFC000;
+    margin-bottom: 20px;
+}
+
+.sidebar-header h2 {
+    margin: 0;
+    color: #FFC000;
+    font-size: 20px;
+    font-weight: bold;
+    -webkit-text-stroke: 1px #FFC000;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 1px;
+}
+
+/* Список меню */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin: 0;
+}
+
+.sidebar ul li a {
+    display: block;
+    padding: 15px 20px;
+    color: #eeeeee;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-left: 4px solid transparent;
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+}
+
+.sidebar ul li a:hover {
+    background-color: rgba(255, 192, 0, 0.1);
+    border-left-color: #FFC000;
+    color: #FFC000;
+    padding-left: 25px;
+}
+
+.sidebar ul li a.active {
+    background-color: rgba(255, 192, 0, 0.15);
+    border-left-color: #FFC000;
+    color: #FFC000;
+    font-weight: bold;
+}
+
+/* Иконки меню */
+.sidebar ul li a:before {
+    content: "▸";
+    margin-right: 10px;
+    font-size: 18px;
+    display: inline-block;
+    width: 20px;
+    text-align: center;
+}
+
+/* Групы меню */
+.sidebar-section {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 192, 0, 0.2);
+}
+
+.sidebar-section:first-of-type {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+}
+
+.sidebar-section-title {
+    padding: 10px 20px;
+    color: #FFC000;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.7;
+}
+
+/* Кнопка открытия/закрытия меню */
+.menu-toggle {
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #FFC000;
+    color: #353746;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 99;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.menu-toggle:hover {
+    background-color: #FFD700;
+}
+
+/* Кнопка закрытия меню (для мобильных) */
+.sidebar-close {
+    display: none;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: #FFC000;
+    font-size: 28px;
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    z-index: 101;
+}
+
+/* Основной контент */
+.main-content {
+    flex: 1;
+    margin-left: 250px;
+    width: calc(100% - 250px);
+    transition: margin-left 0.3s ease, width 0.3s ease;
+}
+
+/* Адаптивность для таблетов и мобильных */
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 200px;
+    }
+    
+    .main-content {
+        margin-left: 200px;
+        width: calc(100% - 200px);
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        max-width: 250px;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        z-index: 1000;
+    }
+    
+    .sidebar.active {
+        transform: translateX(0);
+    }
+    
+    .sidebar-close {
+        display: flex;
+    }
+    
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+    
+    body.sidebar-open {
+        overflow: hidden;
+    }
+    
+    /* Показываем кнопку меню только на мобильных */
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* Скроллбар */
+.sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: rgba(255, 192, 0, 0.1);
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: #FFC000;
+    border-radius: 3px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background: #FFD700;
+}

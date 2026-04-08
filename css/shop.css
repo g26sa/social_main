@@ -1,0 +1,113 @@
+/* Общие стили */
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+background-color: #353746;
+color: #eeeeec;
+animation: fadeIn 0.8s ease-in-out forwards;
+font-size: 18px; /* Увеличиваем размер шрифта */
+}
+@keyframes fadeIn {
+from {
+opacity: 0;
+transform: translateY(-20px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+header{
+background-color: #464c5e;
+padding: 20px;
+text-align: center;
+height: 90px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+header h1{
+text-align: center;
+margin: 0;
+color: #FFC000;
+font-size: 56px;
+-webkit-text-stroke: 2px #FFC000;
+-webkit-text-fill-color: transparent;
+}
+/* Стили для раздела "Ассортимент" */
+.assortment {
+padding: 20px;
+14
+}
+/* Стили для заголовка "Моя корзина" */
+.zagolovok-shop {
+padding: 20px;
+text-align: center;
+height: 90px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+/* Стили для кнопки "Моя корзина" */
+.zagolovok-shop a.korzina {
+display: inline-block;
+justify-content: center;
+background-image: linear-gradient(45deg, #FFC000, #FF8C00);
+width: 50%;
+padding: 10px 20px;
+background-color: #FFC000;
+color: #333;
+font-size: 28px;
+text-decoration: none;
+border-radius: 30px;
+margin-left: auto;
+margin-right: auto;
+transition: all 0.3s ease;
+}
+.zagolovok-shop a.korzina:hover {
+background-color: #ffd903; /* Изменяем цвет при наведении */
+color: #333; /* Изменяем цвет текста при наведении */
+box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+transform: translateY(-2px);
+}
+/* Стили для товаров */
+.products {
+margin-top: 20px;
+}
+/* Стили для таблицы с товарами */
+.table_shop {
+width: 100%;
+border-collapse: collapse;
+}
+.table_shop th,
+.table_shop td {
+padding: 12px;
+text-align: center;
+15
+border-bottom: 1px solid #eeeeec;
+font-size: 24px;
+}
+/* Стили для заголовков таблицы */
+.table_shop th {
+color: #FFC000;
+font-size: 40px; /* Увеличиваем размер шрифта */
+}
+/* Стили для ячеек таблицы */
+.table_shop td {
+color: #eeeeec;
+}
+/* Стили для кнопки "Добавить в корзину" */
+.add-to-cart {
+background-color: #FFC000;
+border: none;
+color: #353746;
+padding: 14px 28px; /* Увеличиваем отступы кнопки */
+font-size: 20px; /* Увеличиваем размер шрифта */
+border-radius: 5px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+.add-to-cart:hover {
+background-color: #ffd903;
+}

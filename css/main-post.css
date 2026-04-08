@@ -1,0 +1,145 @@
+/* Страница новостей — фон и отступы в духе личного кабинета */
+body.posts-feed-page {
+    min-height: 100vh;
+    padding-bottom: 40px;
+}
+
+.posts-feed-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.create-post-wrap {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+a.create-post-button {
+    display: inline-block;
+    margin-bottom: 0;
+    padding: 14px 40px;
+    min-width: 240px;
+    background-color: #FFC000;
+    color: #353746;
+    font-weight: bold;
+    font-size: 17px;
+    text-decoration: none;
+    border-radius: 22px;
+    border: none;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+a.create-post-button:hover {
+    background-color: #ffd903;
+    text-decoration: none;
+}
+
+/* Лента постов */
+.posts-feed-inner .posts {
+    padding: 0;
+    margin: 0;
+}
+
+.posts {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Карточка отдельного поста */
+.post {
+    display: flex;
+    align-items: flex-start;
+    background-color: #464c5e; /* Основной цвет карточки */
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    color: #eeeeec;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Эффект при наведении на карточку (дублируем логику JS в CSS для надежности) */
+.post:hover {
+    background-color: #50576b;
+    transform: translateY(-3px);
+}
+
+/* Контейнер для изображения (круглое) */
+.post-img-container {
+    flex-shrink: 0;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 25px;
+    border: 2px solid #FFC000;
+}
+
+.post-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Чтобы картинка не растягивалась */
+    transition: transform 0.4s ease-in-out;
+}
+
+.post-img-container--empty {
+    background: radial-gradient(circle at 30% 30%, rgba(255, 192, 0, 0.15), transparent 60%),
+        linear-gradient(145deg, #353746, #5a6175);
+}
+
+/* Эффект для картинки при наведении */
+.post-img-container img:hover {
+    transform: scale(1.15);
+    border-radius: 10%; /* Легкое скругление углов при увеличении */
+}
+
+/* Контентная часть поста */
+.post-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.post h2 {
+    margin: 0 0 10px 0;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+/* Явно задаём заливку текста — иначе в WebKit может унаследоваться прозрачность с других стилей */
+.posts-feed-page .post h2 a.post-feed-link,
+.posts-feed-page .post h2 a {
+    color: #FFC000 !important;
+    -webkit-text-fill-color: #FFC000 !important;
+    text-decoration: none;
+}
+
+.post h2 a:hover {
+    color: #ffd903 !important;
+    -webkit-text-fill-color: #ffd903 !important;
+    text-decoration: underline !important;
+}
+
+.post p,
+.posts-feed-page .post p.post-feed-text {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #d1d1d1 !important;
+    -webkit-text-fill-color: #d1d1d1 !important;
+}
+
+/* Анимация появления */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

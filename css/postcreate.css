@@ -1,0 +1,91 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #FFC000;
+    background-color: #464c5e;
+    margin: 0;
+    padding: 0;
+    font-size: 21px;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 56px;
+    -webkit-text-stroke: 2px #FFC000;
+    -webkit-text-fill-color: transparent;
+}
+
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f4f7f8;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+form textarea {
+    height: 100px;
+}
+
+/* Стили для кнопки Создать */
+form button[type="submit"] {
+    background-color: #AA8F00;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    width: 100%;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+form button[type="submit"]:hover {
+    background-color: #FFD903;
+}
+
+/* Стили для выбора файла */
+form input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px dashed #d68d06;
+    border-radius: 5px;
+    box-sizing: border-box;
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+form input[type="file"]:hover {
+    border-color: #e6c403;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}

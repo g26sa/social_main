@@ -1,0 +1,165 @@
+/* Общие стили */
+body {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Установка шрифта
+*/
+margin: 0; /* Убираем внешние отступы */
+padding: 0; /* Убираем внутренние отступы */
+background-color: #353746; /* Цвет фона */
+color: #eeeeec; /* Цвет текста */
+}
+/* Заголовок */
+header {
+background-color: #464c5e; /* Цвет фона */
+font-size: 24px; /* Размер шрифта */
+padding: 20px; /* Внутренние отступы */
+text-align: center; /* Выравнивание текста по центру */
+color: #FFC000; /* Цвет текста */
+margin-bottom: 20px; /* Внешний отступ снизу */
+-webkit-text-stroke: 2px #FFC000; /* Обводка текста */
+-webkit-text-fill-color: transparent; /* Цвет текста за обводкой */
+}
+/* Стили для таблицы */
+.table_shop {
+width: 100%; /* Ширина таблицы */
+border-collapse: collapse; /* Слияние границ ячеек */
+margin-bottom: 20px; /* Внешний отступ снизу */
+}
+/* Стили для заголовков таблицы */
+.table_shop th {
+background-color: #464c5e; /* Цвет фона */
+color: #FFC000; /* Цвет текста */
+padding: 15px; /* Внутренние отступы */
+text-align: center; /* Выравнивание текста по центру */
+}
+6
+/* Стили для четных строк таблицы */
+.table_shop tr:nth-child(even) {
+background-color: #3a3e4d; /* Цвет фона */
+animation: slideRightToLeft 0.8s ease-in-out forwards; /* Анимация */
+}
+/* Стили для нечетных строк таблицы */
+.table_shop tr:nth-child(odd) {
+background-color: #2d313f; /* Цвет фона */
+animation: slideLeftToRight 0.8s ease-in-out forwards; /* Анимация */
+}
+/* Стили для строки при наведении */
+.table_shop tr:hover {
+background-color: rgba(255, 255, 255, 0.1); /* Цвет фона */
+}
+/* Анимация slideRightToLeft */
+@keyframes slideRightToLeft {
+from {
+transform: translateX(100%); /* Начальное положение */
+opacity: 0; /* Начальная непрозрачность */
+}
+to {
+transform: translateX(0); /* Конечное положение */
+opacity: 1; /* Конечная непрозрачность */
+}
+}
+/* Анимация slideLeftToRight */
+@keyframes slideLeftToRight {
+from {
+transform: translateX(-100%); /* Начальное положение */
+opacity: 0; /* Начальная непрозрачность */
+}
+to {
+transform: translateX(0); /* Конечное положение */
+opacity: 1; /* Конечная непрозрачность */
+}
+}
+/* Стили для ссылок */
+a {
+color: #FFC000; /* Цвет ссылок */
+text-decoration: none; /* Убираем подчеркивание */
+}
+/* Стили для ссылок при наведении */
+a:hover {
+color: #ffd903; /* Цвет ссылок при наведении */
+7
+text-decoration: underline; /* Добавляем подчеркивание при наведении */
+}
+/* Стили для ячеек таблицы */
+.table_shop td {
+font-size: 30px; /* Размер шрифта */
+padding: 15px; /* Внутренние отступы */
+text-align: center; /* Выравнивание текста по центру */
+color: #eeeeec; /* Цвет текста */
+}
+
+/* --- Карточки заказов (как на фото) --- */
+.orders-list {
+    width: 90%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.order-card {
+    background: #464c5e;
+    border-radius: 20px;
+    padding: 14px 22px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.order-card__icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 20px;
+    background: rgba(0,0,0,0.18);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+}
+
+.order-card__main {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.order-card__title {
+    color: #FFC000;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.order-card__status {
+    color: #eeeeec;
+    font-size: 22px;
+    font-weight: 600;
+    text-align: right;
+}
+
+.order-circle {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 900;
+    text-decoration: none;
+    color: #fff;
+    flex: 0 0 auto;
+}
+
+.order-circle--danger {
+    background: #ff4b3a;
+}
+
+.order-circle--ok {
+    background: #34c759;
+}
+
+.order-card-link {
+    text-decoration: none;
+    color: inherit;
+}

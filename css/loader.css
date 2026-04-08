@@ -1,0 +1,157 @@
+/* loader.css */
+
+.loader {
+    position: fixed; /* Фиксированное позиционирование, чтобы прелоадер оставался на месте при прокрутке */
+    top: 0; /* Расположение сверху */
+    left: 0; /* Расположение слева */
+    width: 100%; /* Ширина прелоадера равна ширине экрана */
+    height: 100%; /* Высота прелоадера равна высоте экрана */
+    background: #353746; /* Цвет фона прелоадера */
+    display: flex; /* Использование flexbox для центрирования элементов */
+    justify-content: center; /* Выравнивание по горизонтали по центру */
+    align-items: center; /* Выравнивание по вертикали по центру */
+    z-index: 9999; /* Поверх всего контента */
+}
+
+.dash {
+    margin: 0 40px; /* Отступы по горизонтали для полос */
+    width: 80px; /* Ширина полосы */
+    height: 15px; /* Высота полосы */
+    border-radius: 50px; /* Задание скругленных углов для создания круглых полос */
+    background: #FFC000; /* Цвет полос */
+    box-shadow: 0 10px 0 #C00000; /* Тень полос */
+}
+
+/* Анимация вращения для первой полосы */
+.one {
+    margin-right: -40px; /* Коррекция позиции для создания эффекта перекрывания */
+    transform-origin: center left; /* Определение точки вращения */
+    animation: spin 3s linear infinite; /* Применение анимации */
+}
+
+/* Анимация вращения для второй полосы */
+.two {
+    transform-origin: center right; /* Определение точки вращения */
+    animation: spin2 3s linear infinite; /* Применение анимации */
+    animation-delay: 0.2s; /* Задержка анимации */
+}
+
+/* Анимация вращения для третьей полосы */
+.three {
+    transform-origin: center right; /* Определение точки вращения */
+    animation: spin3 3s linear infinite; /* Применение анимации */
+    animation-delay: 0.3s; /* Задержка анимации */
+}
+
+/* Анимация вращения для четвертой полосы */
+.four {
+    transform-origin: center right; /* Определение точки вращения */
+    animation: spin4 3s linear infinite; /* Применение анимации */
+    animation-delay: 0.4s; /* Задержка анимации */
+}
+
+/* Ключевые кадры для анимации вращения первой полосы */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(360deg);
+    }
+    30% {
+        transform: rotate(370deg);
+    }
+    35% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Ключевые кадры для анимации вращения второй полосы */
+@keyframes spin2 {
+    0% {
+        transform: rotate(0deg);
+    }
+    20% {
+        transform: rotate(0deg);
+    }
+    30% {
+        transform: rotate(-180deg);
+    }
+    35% {
+        transform: rotate(-190deg);
+    }
+    40% {
+        transform: rotate(-180deg);
+    }
+    78% {
+        transform: rotate(-180deg);
+    }
+    95% {
+        transform: rotate(-360deg);
+    }
+    98% {
+        transform: rotate(-370deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+/* Ключевые кадры для анимации вращения третьей полосы */
+@keyframes spin3 {
+    0% {
+        transform: rotate(0deg);
+    }
+    27% {
+        transform: rotate(0deg);
+    }
+    40% {
+        transform: rotate(180deg);
+    }
+    45% {
+        transform: rotate(190deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    62% {
+        transform: rotate(180deg);
+    }
+    75% {
+        transform: rotate(360deg);
+    }
+    80% {
+        transform: rotate(370deg);
+    }
+    85% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Ключевые кадры для анимации вращения четвертой полосы */
+@keyframes spin4 {
+    0% {
+        transform: rotate(0deg);
+    }
+    38% {
+        transform: rotate(0deg);
+    }
+    60% {
+        transform: rotate(-360deg);
+    }
+    65% {
+        transform: rotate(-370deg);
+    }
+    75% {
+        transform: rotate(-360deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}

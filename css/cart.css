@@ -1,0 +1,91 @@
+/* Общие стили */
+body {
+font-family: Arial, sans-serif; /* Используемый шрифт */
+margin: 0; /* Убираем внешние отступы */
+padding: 0; /* Убираем внутренние отступы */
+background-color: #353746; /* Цвет фона */
+color: #eeeeec; /* Цвет текста */
+}
+/* Стили для заголовка */
+header {
+background-color: #464c5e; /* Цвет фона */
+padding: 20px; /* Отступы внутри элемента */
+text-align: center; /* Выравнивание текста по центру */
+height: 90px; /* Высота заголовка */
+display: flex; /* Используем flexbox */
+flex-direction: column; /* Направление элементов - колонка */
+justify-content: center; /* Выравнивание элементов по центру по вертикали */
+}
+header h1 {
+text-align: center; /* Выравнивание текста по центру */
+margin: 0; /* Убираем внешние отступы */
+color: #FFC000; /* Цвет текста */
+font-size: 56px; /* Размер шрифта */
+-webkit-text-stroke: 2px #FFC000; /* Обводка текста */
+-webkit-text-fill-color: transparent; /* Прозрачный цвет текста */
+}
+/* Стили для главного блока корзины */
+.main-cart {
+max-width: 1500px; /* Максимальная ширина блока */
+margin: 20px auto; /* Центрирование блока */
+padding: 20px; /* Отступы внутри блока */
+background-color: #fff; /* Цвет фона */
+border-radius: 5px; /* Закругление углов */
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Тень блока */
+}
+/* Стили для таблицы корзины */
+.table_cart {
+width: 100%; /* Ширина таблицы на всю доступную ширину */
+border-collapse: collapse; /* Убираем внешние границы ячеек */
+margin-top: 20px; /* Внешний отступ сверху */
+}
+.table_cart th,
+.table_cart td {
+padding: 15px; /* Внутренние отступы ячеек */
+text-align: center; /* Выравнивание текста по центру */
+font-size: 23px; /* Размер шрифта */
+border-bottom: 1px solid #ccc; /* Горизонтальная линия под каждой строкой */
+}
+/* Стили для ячеек заголовка таблицы */
+.table_cart th {
+background-color: #f0f0f0; /* Цвет фона */
+color: #333; /* Цвет текста */
+}
+/* Стили для ячеек данных таблицы */
+.table_cart td {
+background-color: #fff; /* Цвет фона */
+color: #333; /* Цвет текста */
+}
+/* Стили для кнопок увеличения и уменьшения количества товаров */
+.count-product-min,
+.count-product-max {
+background-color: #FFC000; /* Цвет фона кнопок */
+border: none; /* Убираем границы кнопок */
+color: #333; /* Цвет текста */
+padding: 8px 16px; /* Внутренние отступы кнопок */
+font-size: 19px; /* Размер шрифта */
+border-radius: 5px; /* Закругление углов кнопок */
+cursor: pointer; /* Изменяем курсор при наведении */
+margin: 0 8px; /* Внешний отступ */
+}
+.count-product-min:hover,
+.count-product-max:hover {
+background-color: #FF8C00; /* Изменяем цвет фона при наведении */
+}
+/* Стили для кнопки "Оформить заказ" */
+.zagalovok button.post-bd {
+background-color: #FFC000; /* Цвет фона кнопки */
+color: #333; /* Цвет текста */
+padding: 20px 30px; /* Внутренние отступы */
+font-size: 23px; /* Размер шрифта */
+border: none; /* Убираем границы */
+border-radius: 5px; /* Закругление углов */
+cursor: pointer; /* Изменяем курсор при наведении */
+transition: background-color 0.3s ease; /* Плавное изменение цвета фона */
+display: block; /* Блочный элемент */
+margin: 20px auto; /* Отступы сверху и снизу автоматически, слева и справа -
+автоматически (центрирование по горизонтали) */
+}
+.zagalovok button.post-bd:hover {
+background-color: #FF8C00; /* Измененный цвет фона при наведении */
+}

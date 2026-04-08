@@ -1,0 +1,89 @@
+body {
+background-color: #464c5e;
+}
+
+.post-container, .comment-form-container, .comments-container {
+background-color: #ffffff;
+padding: 40px;
+margin: 40px auto;
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06), 0 6px 20px rgba(0, 0, 0, 0.1);
+max-width: 800px;
+font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-container:hover, .comment-form-container:hover, .comments-container:hover {
+transform: translateY(-5px);
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1), 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.post-container h1, .comments-container h3 {
+color: #333;
+margin-bottom: 20px;
+font-size: 28px;
+}
+
+.author-name, .comment p b {
+font-weight: bold;
+font-size: 18px;
+color: #FFC000;
+margin-bottom: 20px;
+}
+
+.post-container p, .comment p {
+color: #666;
+font-size: 16px;
+line-height: 1.8;
+}
+
+.post-container img {
+width: 100%;
+height: auto;
+border-radius: 5px;
+margin-bottom: 20px;
+object-fit: cover;
+}
+
+.post-time i {
+color: #888;
+font-size: 14px;
+margin-top: 20px;
+text-align: right;
+}
+
+.comment-form-container label, .comment-form-container button {
+font-size: 18px;
+font-weight: bold;
+margin-bottom: 10px;
+}
+
+.comment-form-container textarea {
+width: 100%;
+padding: 10px;
+font-size: 16px;
+border-radius: 5px;
+border: 1px solid #ccc;
+resize: vertical;
+}
+
+.comment-form-container button {
+padding: 10px 20px;
+background-color: #FFC000;
+transition: background-color 0.3s ease;
+}
+
+.comment-form-container button:hover {
+background-color: #FFD903;
+}
+
+.comments-container .comment {
+margin-bottom: 20px;
+transition: background-color 0.3s ease;
+}
+
+.comments-container .comment:hover {
+padding-left: 5px;
+border-radius: 5px;
+background-color: #f0f0f0;
+}

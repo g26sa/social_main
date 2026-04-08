@@ -1,0 +1,68 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #464c5e;
+}
+h1 {
+    text-align: center;
+    font-size: 46px;
+    color: #FFC000;
+    padding-top: 20px;
+    margin-top: 0;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px #FFC000;
+}
+.video-container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+.video-container h2 {
+    font-size: 28px;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+.video-container p {
+    font-size: 18px;
+    color: #34495e;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+.video {
+    width: 100%;
+    height: 400px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.comment-form-container label,
+.comment-form-container button {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.comment-form-container textarea {
+    width: 97%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: vertical;
+}
+.comment-form-container button {
+    padding: 10px 20px;
+    background-color: #FFC000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.comment-form-container button:hover {
+    background-color: #FFD966;
+}

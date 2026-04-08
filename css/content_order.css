@@ -1,0 +1,148 @@
+/* Общие стили */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #353746;
+    color: #eeeeec;
+}
+/* Стили для заголовка */
+header {
+    background-color: #464c5e;
+    padding: 20px;
+    text-align: center;
+    color: #FFC000;
+    margin-bottom: 20px;
+    -webkit-text-stroke: 2px #FFC000;
+    -webkit-text-fill-color: transparent;
+}
+
+header h1 {
+    margin-top: 15px;
+    font-size: 48px;
+}
+/* Стили для таблицы .table_shop */
+.table_shop {
+    font-weight: bold;
+    font-size: 30px;
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: #464c5e;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #FFC000;
+    border-radius: 80px;
+    animation: fadeIn 0.8s ease-in-out;
+}
+/* Стили для таблицы товаров .table_shop1 */
+.table_shop1 {
+    font-size: 20px;
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #333;
+    animation: fadeIn 0.8s ease-in-out;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/* Стили для нечетных строк таблицы .table_shop */
+.table_shop1 tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+.table_shop1 th,
+.table_shop1 td {
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+
+.table_shop1 tr:hover {
+    background-color: #dddada;
+    transition: background-color 0.3s ease-in-out;
+}
+/* Стили для футера таблицы .table_shop1 */
+.table_shop1 tfoot {
+    font-weight: bold;
+}
+
+/* Стили для изображений в таблице */
+.table_shop1 img {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+/* --- Верхняя карточка заказа (как на фото) --- */
+.order-detail-header {
+    width: 80%;
+    margin: 0 auto 20px auto;
+    background-color: #464c5e;
+    border-radius: 20px;
+    padding: 18px 22px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.order-detail-header__icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 20px;
+    background: rgba(0,0,0,0.18);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+}
+
+.order-detail-header__main {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.order-detail-header__title {
+    color: #FFC000;
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.order-detail-header__status {
+    color: #eeeeec;
+    font-size: 24px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.order-circle {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 900;
+    text-decoration: none;
+    color: #fff;
+    flex: 0 0 auto;
+}
+
+.order-circle--danger {
+    background: #ff4b3a;
+}
+
+.order-circle--ok {
+    background: #34c759;
+}

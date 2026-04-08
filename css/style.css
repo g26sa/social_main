@@ -1,0 +1,26 @@
+body {
+    font: 300 15px/1.7 'Montserrat', sans-serif;
+    color: #eeeeee;
+    background: #FFC000;
+    overflow: hidden;
+    height: 100vh;
+    margin: 0;
+}
+
+.section-center {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: block;
+    width: 100%;
+    z-index: 6;
+    text-align: center;
+    transform: translateY(-50%);
+}
+
+h1 {
+    font: 800 7vw/1 'Montserrat', sans-serif;
+    color: #ffeba7;
+    -webkit-text-stroke: 5px #C00000;
+    -webkit-text-fill-color: transparent;
+}

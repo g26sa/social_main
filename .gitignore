@@ -1,0 +1,41 @@
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Uploads and user-generated content
+/uploads/
+/avatars/
+/music/uploads/
+/video/uploads/
+/shop/img/
+/allposts/
+
+# System files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Logs
+*.log
+logs/
+
+# Dependencies (if using Composer)
+vendor/composer.lock
+
+# PHP
+.php-cs-fixer.cache
+.phpunit.result.cache
+
+# Temporary files
+tmp/
+temp/
+cache/
